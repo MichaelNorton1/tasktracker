@@ -30,7 +30,7 @@ CREATE TABLE participant (
 );
 """
 test=1
-
+test=2
 create_course_table = """
 CREATE TABLE course (
   course_id INT PRIMARY KEY,
