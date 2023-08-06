@@ -1,8 +1,7 @@
-from read_query import read_query
-from sqlconnect import create_db_connection
-from local import sqlpassword
-from execute_query_db import execute_query
-from createdb import create_database
+from sql_functions.sqlconnect import create_db_connection
+from sql_functions.local import sqlpassword
+from sql_functions.execute_query_db import execute_query
+from sql_functions.read_query import read_query
 
 dbname="school"
 
@@ -11,19 +10,19 @@ connection = create_db_connection("localhost","root",sqlpassword,dbname)
 
 
 q1 = """
-SELECT 
-teacher.teacher_id
-FROM teacher
-WHERE teacher.language_1 = "FRA"
+SELECT language
+FROM course
+WHERE course_id = 19
  ;
 """
 update = """
 DELETE FROM course 
-WHERE course_id = 20;
+WHERE course_id = 19;
 """
 
-execute_query(connection,update)
+#execute_query(connection,update)
 
 
-#results = read_query(connection,q1)
+results = read_query(connection,q1)
+print(results)
 
