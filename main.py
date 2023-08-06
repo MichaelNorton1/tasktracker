@@ -29,8 +29,7 @@ CREATE TABLE participant (
   client INT
 );
 """
-test=1
-test2=2
+
 create_course_table = """
 CREATE TABLE course (
   course_id INT PRIMARY KEY,
