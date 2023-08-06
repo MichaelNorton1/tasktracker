@@ -29,6 +29,7 @@ CREATE TABLE participant (
   client INT
 );
 """
+test=1
 
 create_course_table = """
 CREATE TABLE course (
